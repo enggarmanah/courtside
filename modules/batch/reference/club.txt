@@ -1,0 +1,119 @@
+https://api.courtside.id/api/mobile/mitra/nearby-all-new?page=1&per_page=12&lat=37.4219983&lng=-122.084&location_id=9eabec1b-e9c9-4f67-b9f5-f99c063a1a35
+method: get
+
+{
+  "data": [
+    {
+      "id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+      "mitra_identifier": null,
+      "name": "Castle Padel",
+      "sub_name": "Setiabudi",
+      "address": "Jl. Sultan Agung, RT.11/RW.4, Ps. Manggis, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12970",
+      "email": "castledepadelguntur@gmail.com",
+      "whatsapp": "8131871187",
+      "instagram": "castlepadel",
+      "desc": "🏰 𝑪𝒉𝒂𝒍𝒍𝒆𝒏𝒈𝒆.𝑪𝒐𝒏𝒒𝒖𝒆𝒓.𝑪𝒉𝒂𝒎𝒑𝒊𝒐𝒏 👑🎾",
+      "waivers": "<p><strong>Court Booking:</strong></p><ul><li>To secure your court bookings, please make your payment through Courtside app.</li><li>Please note that <strong>refunds and reschedules are not available</strong> for confirmed bookings.</li><li>Rescheduling must be made at least <strong>7 days before the match time and subject to court availability and is allowed only once.</strong></li><li><strong>All booked schedules may be subject to rescheduling if Castle has or is hosting an event for corporate, private or the military police needs.</strong></li></ul><p><br></p><p><strong>Coaching:</strong></p><ul><li>Our coaching sessions are in partnership with Good Game Academy</li><li>You can book coaching sessions through the <strong>Courtside app</strong> or discuss the schedule directly with <strong>castle's admin.</strong></li><li><strong>Outside coaches are allowed</strong> to conduct lessons on our courts, only the court fee applies.</li></ul><p><br></p><p><strong>House Rules:</strong></p><ul><li>Please wear proper <strong>padel attire and non-marking footwear</strong> are required at all times.</li><li>Please <strong>keep the court and surrounding areas clean</strong>.</li><li><strong>Smoking is not allowed</strong>, except for <strong>electric or vape devices</strong> in designated areas.</li><li><strong>Children under 12</strong> must be <strong>supervised by an adult</strong> at all times and are <strong>not allowed to play</strong> unless under an approved coaching session.</li><li><strong>Pets are not allowed.</strong></li><li><strong>No Outside Food or Drinks Allowed</strong></li><li><strong>All events, tournaments, or special activities must be confirmed with the admin in advance.</strong></li></ul>",
+      "image_path": "mitra/9fad3cdd-ac98-40d6-82e5-bed92ddd62da/image/",
+      "image_name": "1200fca5-3a36-4d2c-862d-3f610bb17e3e.jpeg",
+      "logo_path": "mitra/9fad3cdd-ac98-40d6-82e5-bed92ddd62da/logo/",
+      "logo_name": "98c699d5-6385-47f5-b1c3-424d5dbe89cf.jpg",
+      "lat": -6.206544443746479,
+      "long": 106.83917153623354,
+      "proses_book": true,
+      "flag_group": false,
+      "link_map_business": "https://maps.app.goo.gl/Vfvkn6azS8ns8jCP9?g_st=iw",
+      "schedule_booking_view": 14,
+      "start_date": null,
+      "end_date": null,
+      "is_favorite": false,
+      "is_hidden": false,
+      "mitra_operating_hours": [
+        {
+          "id": "a125d4a8-45e5-4145-b83c-7c6df934894e",
+          "mitra_id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+          "key": "sun",
+          "open_hours": "06.00",
+          "close_hours": "24.00",
+          "closed": 0,
+          "order": 1,
+          "created_at": "2026-02-23T09:22:16.000000Z",
+          "updated_at": "2026-02-23T09:22:16.000000Z"
+        },
+        {
+          "id": "a125d4a8-4648-4fcf-a0f3-0fc8c4ca87e1",
+          "mitra_id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+          "key": "mon",
+          "open_hours": "06.00",
+          "close_hours": "24.00",
+          "closed": 0,
+          "order": 2,
+          "created_at": "2026-02-23T09:22:16.000000Z",
+          "updated_at": "2026-02-23T09:22:16.000000Z"
+        },
+        {
+          "id": "a125d4a8-469a-4720-a057-137ee112e676",
+          "mitra_id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+          "key": "tue",
+          "open_hours": "06.00",
+          "close_hours": "24.00",
+          "closed": 0,
+          "order": 3,
+          "created_at": "2026-02-23T09:22:16.000000Z",
+          "updated_at": "2026-02-23T09:22:16.000000Z"
+        },
+        {
+          "id": "a125d4a8-46e9-4f2a-b4e7-37af9bf15067",
+          "mitra_id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+          "key": "wed",
+          "open_hours": "06.00",
+          "close_hours": "24.00",
+          "closed": 0,
+          "order": 4,
+          "created_at": "2026-02-23T09:22:16.000000Z",
+          "updated_at": "2026-02-23T09:22:16.000000Z"
+        },
+        {
+          "id": "a125d4a8-4743-46eb-927f-3497ed6f628c",
+          "mitra_id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+          "key": "thu",
+          "open_hours": "06.00",
+          "close_hours": "24.00",
+          "closed": 0,
+          "order": 5,
+          "created_at": "2026-02-23T09:22:16.000000Z",
+          "updated_at": "2026-02-23T09:22:16.000000Z"
+        },
+        {
+          "id": "a125d4a8-47a9-4792-90f6-ba003cbc3983",
+          "mitra_id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+          "key": "fri",
+          "open_hours": "06.00",
+          "close_hours": "24.00",
+          "closed": 0,
+          "order": 6,
+          "created_at": "2026-02-23T09:22:16.000000Z",
+          "updated_at": "2026-02-23T09:22:16.000000Z"
+        },
+        {
+          "id": "a125d4a8-480c-47a5-a843-86519b62962a",
+          "mitra_id": "9fad3cdd-ac98-40d6-82e5-bed92ddd62da",
+          "key": "sat",
+          "open_hours": "06.00",
+          "close_hours": "24.00",
+          "closed": 0,
+          "order": 7,
+          "created_at": "2026-02-23T09:22:16.000000Z",
+          "updated_at": "2026-02-23T09:22:16.000000Z"
+        }
+      ],
+      "mitra_cancel_expired": 0,
+      "mitra_reschedule_expired": 0,
+      "mitra_coach_expired": 0,
+      "mitra_tags": [],
+      "blacklist": false,
+      "distance": 13984.512067855314,
+      "price": 375000,
+      "mitra_facilities": []
+    }
+}

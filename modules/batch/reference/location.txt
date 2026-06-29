@@ -1,0 +1,187 @@
+https://api.courtside.id/api/mobile/mitra/location
+method: get
+
+Headers
+accept:
+application/json
+accept-encoding:
+gzip
+authorization:
+Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZDNlYTdkMy0yZjBmLTQ3ZGUtYjVmMC01ZTQyMmM4Y2NkZjciLCJqdGkiOiIzYTIyOWQ0OGMxMzkzYTRkZDkzZmQ3MmNkZmUzNjY4Y2Q0Njg2MzA3Yzg2Mzc1NTg5ZjQ3ZTJiMDZmZWJkMThkZmM2YjQ4MDE2MzcwNGEwZiIsImlhdCI6MTc4MjI4NjIyNy40MDYxMzQsIm5iZiI6MTc4MjI4NjIyNy40MDYxMzYsImV4cCI6MTgxMzgyMjIyNy40MDA5ODgsInN1YiI6ImEyMDM3ZGU0LTFkNzItNDdiYi1hNGJmLTliOTk4ODQxNjRmNyIsInNjb3BlcyI6W119.W7UG4Gcu3S178OeALoGlISbHbNUqUZrC6NXvKyjeGOcBSMKxP97gOTL2h3bQHLu5sIaFH7lvOGap44lid_QyT-yOuxgR1yPvJKma298AwVVmky10U3BYknAlaj6Ucs6gwplgsUNWZU7Umq0oeAevhJRfKqx-TuhpXRSgWN7HTYkQSjlSfEGgX7SnAcNH4_cqa9UHokrQhJ4ViTf2IKMg5sbzO5q87bupE9-VHOy0ruEbQyTx5rEXMafiw9k3XfMmNFtXPHh_OYceuNt0b1nBoc35wf-3sRNnZqWfUqFDWtKQVlPZh8qcQP11o7_if49IbCq_TypqCetKbfmqDutQDgTdb04AvKL6qSVWnaRswAa-GApXiJuLRNIul_KVnhkJaq5cYwbjGJkiaQPDn4SWo5l5feS-XZZM3AoQbUZHi1J0rhN-5ZdjamyG-2CHVFh_F1wSD4F7v3o_s2DD-qhQz06r21JieWqW7QNhez_LpvAR9OjNGQzTI3j75G-h1ChRANEz1FQsmEVmWJ8kS2M84e7m8c-zjCVXTPOBdq-omJx2QgOarXJBpyJkDa2fbCAFF1fGZWFyztOk02ujPycmcPIY49q2qkSW60qLaJunKyRPOMEX2me47d88HSRI-w1bQMVkwN9lw8ZTXE78YkOSH46NUN1lfawFRcArsj064vQ
+host:
+api.courtside.id
+user-agent:
+Courtside/1.1.34
+
+Response:
+[
+  {
+    "id": "9f027b94-e755-4527-a7d4-ce8575fc5424",
+    "name": "Bali",
+    "created_at": "2025-05-27T07:15:21.000000Z",
+    "updated_at": "2025-05-27T07:15:21.000000Z"
+  },
+  {
+    "id": "9eabebe1-2749-4a70-b158-c7ea31373eef",
+    "name": "Bandung",
+    "created_at": "2025-04-14T06:32:19.000000Z",
+    "updated_at": "2025-04-14T06:32:19.000000Z"
+  },
+  {
+    "id": "a1f27b01-6c4c-4ec1-85ea-b0498c65efac",
+    "name": "Batam",
+    "created_at": "2026-06-05T02:56:18.000000Z",
+    "updated_at": "2026-06-05T02:56:18.000000Z"
+  },
+  {
+    "id": "9f0e583d-022e-4221-bda2-91c65905c056",
+    "name": "Bekasi",
+    "created_at": "2025-06-02T04:46:27.000000Z",
+    "updated_at": "2025-06-02T04:46:27.000000Z"
+  },
+  {
+    "id": "9f9458b1-a8db-4700-b0db-359a8af6430c",
+    "name": "Bogor",
+    "created_at": "2025-08-07T19:28:40.000000Z",
+    "updated_at": "2025-08-07T19:28:40.000000Z"
+  },
+  {
+    "id": "9eabebe9-6669-4313-8a21-a5e4edee3fa3",
+    "name": "Central Jakarta",
+    "created_at": "2025-04-14T06:32:25.000000Z",
+    "updated_at": "2025-04-14T06:32:25.000000Z"
+  },
+  {
+    "id": "a0d11f3e-529f-4818-a6fc-bb6d51d633e6",
+    "name": "Ciamis",
+    "created_at": "2026-01-12T06:45:27.000000Z",
+    "updated_at": "2026-01-12T06:45:27.000000Z"
+  },
+  {
+    "id": "9f3ed357-0948-4908-a197-f0a0af739221",
+    "name": "Cibubur",
+    "created_at": "2025-06-26T07:10:24.000000Z",
+    "updated_at": "2025-06-26T07:10:24.000000Z"
+  },
+  {
+    "id": "a086f070-8ce1-443b-84a0-ad846cef4adc",
+    "name": "Cilegon",
+    "created_at": "2025-12-06T09:43:19.000000Z",
+    "updated_at": "2025-12-06T09:43:19.000000Z"
+  },
+  {
+    "id": "9f811a2a-12a4-44ec-b266-e19a31fc6ffb",
+    "name": "Cirebon",
+    "created_at": "2025-07-29T05:53:05.000000Z",
+    "updated_at": "2025-07-29T05:53:05.000000Z"
+  },
+  {
+    "id": "9eabebf4-4b4b-4488-a1bf-36eda94cb7d6",
+    "name": "Depok",
+    "created_at": "2025-04-14T06:32:32.000000Z",
+    "updated_at": "2025-04-14T06:32:32.000000Z"
+  },
+  {
+    "id": "9eabec07-6769-4b12-a2fd-05ab422b3119",
+    "name": "East Jakarta",
+    "created_at": "2025-04-14T06:32:45.000000Z",
+    "updated_at": "2025-04-14T06:32:45.000000Z"
+  },
+  {
+    "id": "9f8d6573-2022-41fb-afb7-062fb27586f5",
+    "name": "Garut",
+    "created_at": "2025-08-04T08:33:32.000000Z",
+    "updated_at": "2025-08-04T08:33:32.000000Z"
+  },
+  {
+    "id": "a0d121e5-c8c3-4d0b-8acf-4bdae41ebf5c",
+    "name": "Jambi",
+    "created_at": "2026-01-12T06:52:53.000000Z",
+    "updated_at": "2026-01-12T06:52:53.000000Z"
+  },
+  {
+    "id": "9f4ad33a-a808-44d5-9efe-bebefe313ebd",
+    "name": "Karawang",
+    "created_at": "2025-07-02T06:20:02.000000Z",
+    "updated_at": "2025-07-02T06:20:02.000000Z"
+  },
+  {
+    "id": "a0669893-ebf0-47d3-a1b1-4f21688ebd2c",
+    "name": "Makassar",
+    "created_at": "2025-11-20T07:51:09.000000Z",
+    "updated_at": "2025-11-20T07:51:09.000000Z"
+  },
+  {
+    "id": "a038c7c3-aa90-4724-a316-165089dd6890",
+    "name": "Medan",
+    "created_at": "2025-10-28T13:15:01.000000Z",
+    "updated_at": "2025-10-28T13:15:01.000000Z"
+  },
+  {
+    "id": "9fbd4556-22bb-4811-a81e-d6eb65e79b15",
+    "name": "North Jakarta",
+    "created_at": "2025-08-28T03:43:29.000000Z",
+    "updated_at": "2025-08-28T03:43:29.000000Z"
+  },
+  {
+    "id": "9fefe491-5857-4001-a744-3d03482f0088",
+    "name": "Palembang",
+    "created_at": "2025-09-22T07:40:07.000000Z",
+    "updated_at": "2025-09-22T07:40:07.000000Z"
+  },
+  {
+    "id": "a06ed7e9-8968-4694-b23a-4519549757ca",
+    "name": "Semarang",
+    "created_at": "2025-11-24T10:14:52.000000Z",
+    "updated_at": "2025-11-24T10:14:52.000000Z"
+  },
+  {
+    "id": "a06ed63b-8640-4345-b63c-3a8015dd5bb9",
+    "name": "Solo",
+    "created_at": "2025-11-24T10:10:10.000000Z",
+    "updated_at": "2025-11-24T10:10:10.000000Z"
+  },
+  {
+    "id": "9eabec1b-e9c9-4f67-b9f5-f99c063a1a35",
+    "name": "South Jakarta",
+    "created_at": "2025-04-14T06:32:58.000000Z",
+    "updated_at": "2025-04-14T06:32:58.000000Z"
+  },
+  {
+    "id": "a01fd596-1823-46ae-8378-a086b92ee287",
+    "name": "South Kalimantan",
+    "created_at": "2025-10-16T03:37:58.000000Z",
+    "updated_at": "2025-10-16T03:37:58.000000Z"
+  },
+  {
+    "id": "9eabec2c-f342-48e2-b005-565dd796aa84",
+    "name": "South Tangerang",
+    "created_at": "2025-04-14T06:33:09.000000Z",
+    "updated_at": "2025-04-14T06:33:09.000000Z"
+  },
+  {
+    "id": "9fb731e5-a12d-47bb-b384-7affe5789526",
+    "name": "Surabaya",
+    "created_at": "2025-08-25T03:14:09.000000Z",
+    "updated_at": "2025-08-25T03:14:09.000000Z"
+  },
+  {
+    "id": "9eabec35-3204-4537-a605-d821398d2abe",
+    "name": "Tangerang",
+    "created_at": "2025-04-14T06:33:15.000000Z",
+    "updated_at": "2025-04-14T06:33:15.000000Z"
+  },
+  {
+    "id": "9f753a6c-df47-4a34-8dff-ed0db2603935",
+    "name": "Tasikmalaya",
+    "created_at": "2025-07-23T08:13:22.000000Z",
+    "updated_at": "2025-07-23T08:13:22.000000Z"
+  },
+  {
+    "id": "9eabec41-5161-4bec-98bf-66d43f4150c8",
+    "name": "West Jakarta",
+    "created_at": "2025-04-14T06:33:22.000000Z",
+    "updated_at": "2025-04-14T06:33:22.000000Z"
+  }
+]
+

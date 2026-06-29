@@ -1,0 +1,3 @@
+1. update table court_prices add column start_period and end_period (this is price period, if the price is latest the start_period <= today and (today < end_period or end_period is null)). when the price change then we close the current end_period = today and create new record with start_period = today. update the unique to (club_id, court_id, day, time, start_period, end_period). with this we can monitor court price movement @04_court_prices.sql
+2. make the code modular where where we have court_price.go and court_price_crawler.go
+3. we can call crawler court_price <club_id>, it will fetch court prices for the today+1 until today+8 so that we can get the whole week court prices.

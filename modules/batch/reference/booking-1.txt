@@ -1,0 +1,248 @@
+https://api.courtside.id/api/mobile/booking-court/9fad3cdd-ac98-40d6-82e5-bed92ddd62da/list-book-time
+method: post
+
+Request:
+{
+  "date": "2026-06-25"
+}
+
+Response:
+{
+  "closed": false,
+  "data": [
+    {
+      "time": "06.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "07.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": true,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "08.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "09.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "10.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "11.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "12.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "13.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "14.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "15.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "16.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "17.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 500000,
+      "price_type": "normal"
+    },
+    {
+      "time": "18.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": true,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 500000,
+      "price_type": "normal"
+    },
+    {
+      "time": "19.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": true,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 500000,
+      "price_type": "normal"
+    },
+    {
+      "time": "20.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": true,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 500000,
+      "price_type": "normal"
+    },
+    {
+      "time": "21.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": true,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 500000,
+      "price_type": "normal"
+    },
+    {
+      "time": "22.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    },
+    {
+      "time": "23.00",
+      "my-booking": false,
+      "red-dot": false,
+      "my-booking-data": [],
+      "available": true,
+      "disabled": false,
+      "notify-me-flag": false,
+      "notify-me-data": {},
+      "openplay-flag": false,
+      "price": 375000,
+      "price_type": "normal"
+    }
+  ]
+}

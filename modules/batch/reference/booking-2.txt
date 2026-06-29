@@ -1,0 +1,63 @@
+https://api.courtside.id/api/mobile/booking-court/9fad3cdd-ac98-40d6-82e5-bed92ddd62da/list-court-available
+method: post
+
+request:
+{
+  "duration": 60,
+  "date": "2026-06-26",
+  "start_hours": "23.00"
+}
+
+response:
+{
+  "data": [
+    {
+      "id": "a00213ea-5a03-4837-81da-aea876b067a0",
+      "name": "Court 1",
+      "icon_path": "court\/a00213ea-5a03-4837-81da-aea876b067a0\/icon\/",
+      "icon_name": "1b78da56-1d96-46a9-8ed6-f2d3c1c657db.png",
+      "duration": 60,
+      "date": "2026-06-26",
+      "start_hour": "23.00",
+      "end_hour": "00.00",
+      "price": 375000,
+      "discount_persen": 0,
+      "discount_nominal": 0,
+      "ori_price": 375000,
+      "is_openplay": false,
+      "insurance_price": 5000
+    },
+    {
+      "id": "a0021420-c61f-4a02-988a-98f9646613b3",
+      "name": "Court 2",
+      "icon_path": "court\/a0021420-c61f-4a02-988a-98f9646613b3\/icon\/",
+      "icon_name": "cce5b233-9f15-408d-902f-f05a1ea1f2f0.png",
+      "duration": 60,
+      "date": "2026-06-26",
+      "start_hour": "23.00",
+      "end_hour": "00.00",
+      "price": 375000,
+      "discount_persen": 0,
+      "discount_nominal": 0,
+      "ori_price": 375000,
+      "is_openplay": false,
+      "insurance_price": 5000
+    },
+    {
+      "id": "a0021436-ee4c-41b8-a2e8-2d05b53266a1",
+      "name": "Court 3",
+      "icon_path": "court\/a0021436-ee4c-41b8-a2e8-2d05b53266a1\/icon\/",
+      "icon_name": "8ee995e9-e261-4e48-94a6-74ef0a255d87.png",
+      "duration": 60,
+      "date": "2026-06-26",
+      "start_hour": "23.00",
+      "end_hour": "00.00",
+      "price": 375000,
+      "discount_persen": 0,
+      "discount_nominal": 0,
+      "ori_price": 375000,
+      "is_openplay": false,
+      "insurance_price": 5000
+    }
+  ]
+}
