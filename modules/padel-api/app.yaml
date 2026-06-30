@@ -1,0 +1,39 @@
+# Google App Engine configuration file for the Go API service
+
+# Runtime environment (choose the Go version you are using)
+runtime: go122 # Or go118, go119, go120, go121 etc.
+
+# Service name (optional, but good practice)
+service: default
+
+# Instance class (adjust based on expected load)
+instance_class: F1 # Basic instance class
+
+# Scaling configuration (adjust as needed)
+automatic_scaling:
+  min_instances: 0 # Can scale down to zero to save costs
+  max_instances: 1 # Adjust the maximum number of instances
+  target_cpu_utilization: 0.65
+
+# env_variables section is removed entirely.
+# All environment variables will be loaded from api/config/env.config
+# by the application itself using godotenv.Overload().
+# WARNING: This means secrets might be included in the deployed code bundle
+# if api/config/env.config is not handled carefully during deployment.
+
+# Cloud SQL instances
+# This setting enables the Cloud SQL Proxy for your application.
+# Use the Instance Connection Name from your Cloud SQL instance page.
+beta_settings:
+  cloud_sql_instances: "shared-db-id:asia-southeast2:postgres" # Make sure this matches DB_HOST in env.config if using proxy
+
+# Handlers define how requests are routed to your application code.
+# 'script: auto' automatically starts your Go application.
+handlers:
+  - url: /.* # Route all traffic to the Go application
+    script: auto
+    secure: always # Redirect HTTP to HTTPS
+
+# Network settings (optional, defaults are usually fine)
+# network:
+#   name: default # Use the default VPC network

@@ -1,0 +1,46 @@
+# Build artifacts / compiled binaries
+*.exe
+*.exe~
+__debug_bin.exe*
+*.bin
+*.test
+*.prof
+*.o
+*.so
+*.dylib
+crawler-bin
+api.exe
+api_test.exe
+padel-api.exe
+
+# Local output / generated
+response/
+response.txt
+dist/
+.firebase/
+
+# Dependency directories
+node_modules/
+vendor/
+
+# IDE / editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-project
+*.sublime-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-50: 238 242 252;
+  --brand-100: 224 231 248;
+  --brand-150: 210 220 244;
+  --brand-200: 196 209 241;
+  --brand-300: 156 179 234;
+  --brand-400: 114 146 228;
+  --brand-500: 83 117 226;
+  --brand-600: 63 91 192;
+  --brand-700: 51 73 152;
+  --brand-800: 41 57 118;
+  --brand-900: 34 45 90;
+  --brand-950: 24 32 64;
+}
+
+.dark {
+  --brand-50: 24 32 64;
+  --brand-100: 34 45 90;
+  --brand-150: 41 57 118;
+  --brand-200: 51 73 152;
+  --brand-300: 63 91 192;
+  --brand-400: 83 117 226;
+  --brand-500: 114 146 228;
+  --brand-600: 156 179 234;
+  --brand-700: 196 209 241;
+  --brand-800: 224 231 248;
+  --brand-900: 238 242 252;
+  --brand-950: 245 247 254;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+.dark .sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: #64748b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+}
+
+.calendar-day {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+  color: #1e293b;
+}
+.dark .calendar-day {
+  color: #e2e8f0;
+}
+.calendar-day.is-outside {
+  color: #94a3b8;
+}
+.dark .calendar-day.is-outside {
+  color: #475569;
+}
+.calendar-day.is-weekend {
+  color: #ef4444;
+}
+.dark .calendar-day.is-weekend {
+  color: #f87171;
+}
+.calendar-day.is-weekend.is-outside {
+  color: #fca5a5;
+}
+.dark .calendar-day.is-weekend.is-outside {
+  color: #7f1d1d;
+}
+.calendar-day::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 999px;
+  transition: background-color 0.1s;
+}
+.calendar-day::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 0;
+  transition: background-color 0.1s;
+}
+.calendar-day.is-in-range::before {
+  background: rgb(var(--brand-50));
+}
+.dark .calendar-day.is-in-range::before {
+  background: rgba(83, 117, 226, 0.15);
+}
+.calendar-day.is-in-range::after {
+  background: rgb(var(--brand-50));
+}
+.dark .calendar-day.is-in-range::after {
+  background: rgba(83, 117, 226, 0.15);
+}
+.calendar-day.is-selected::before {
+  background: rgb(var(--brand-600));
+}
+.calendar-day.is-selected::after {
+  background: rgb(var(--brand-600));
+}
+.calendar-day.is-selected.is-start::after {
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.calendar-day.is-selected.is-end::after {
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.calendar-day.is-selected.is-start.is-end::after {
+  border-radius: 999px;
+}
+.calendar-day.is-in-range.is-weekend::before {
+  background: transparent;
+}
+.calendar-day.is-in-range.is-weekend::after {
+  background: rgba(239, 68, 68, 0.08);
+}
+.dark .calendar-day.is-in-range.is-weekend::before {
+  background: transparent;
+}
+.dark .calendar-day.is-in-range.is-weekend::after {
+  background: rgba(248, 113, 113, 0.12);
+}
+.calendar-day.is-selected {
+  color: white;
+  z-index: 2;
+}
+.calendar-day:hover:not(.is-selected)::before {
+  background: rgb(var(--brand-50));
+}
+.dark .calendar-day:hover:not(.is-selected)::before {
+  background: rgba(83, 117, 226, 0.15);
+}

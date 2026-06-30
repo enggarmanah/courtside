@@ -1,0 +1,51 @@
+schema:
+  - graph/*.graphql
+
+exec:
+  filename: graph/generated/generated.go
+  package: generated
+
+model:
+  filename: graph/model/models_gen.go
+  package: model
+
+resolver:
+  layout: follow-schema
+  dir: graph
+  package: graph
+
+struct_tag: json
+
+call_argument_directives_with_null: true
+
+models:
+  ID:
+    model:
+      - github.com/99designs/gqlgen/graphql.ID
+  UUID:
+    model:
+      - github.com/google/uuid.UUID
+  Int:
+    model:
+      - github.com/99designs/gqlgen/graphql.Int
+  Time:
+    model:
+      - github.com/99designs/gqlgen/graphql.Time
+  Map:
+    model:
+      - github.com/99designs/gqlgen/graphql.Map
+  Upload:
+    model:
+      - github.com/99designs/gqlgen/graphql.Upload
+
+  User: {}
+  AuthPayload: {}
+  DashboardSummary: {}
+  DashboardSummaryInput: {}
+  ClubOverviewItem: {}
+  ClubOverviewInput: {}
+  ClubOverviewResult: {}
+  Location: {}
+  Club: {}
+  ClubsInput: {}
+  ClubsResult: {}

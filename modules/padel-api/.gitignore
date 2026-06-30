@@ -1,0 +1,24 @@
+# Compiled binaries
+*.exe
+*.exe~
+__debug_bin.exe*
+*.bin
+*.test
+*.prof
+
+# Dependency directories (only if not vendored)
+/vendor/
+
+# Local configuration files - credential configs committed intentionally (per developer setup)
+# config.properties
+# config-dev.properties
+# !config.properties.example
+
+# IDE specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

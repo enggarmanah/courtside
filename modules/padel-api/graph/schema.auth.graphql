@@ -1,0 +1,10 @@
+type User { id: String! name: String! email: String! userid: String! status: String! }
+type AuthPayload { user: User! token: String! refreshToken: String! expiresIn: Int! }
+
+extend type Mutation {
+  authenticate(userid: String!, password: String!): AuthPayload!
+  refreshToken(refreshToken: String!): AuthPayload!
+  revokeToken(refreshToken: String!): Boolean!
+}
+
+extend type Query { me: User! }

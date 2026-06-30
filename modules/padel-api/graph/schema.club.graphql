@@ -1,0 +1,11 @@
+input ClubsInput { page: Int! pageSize: Int! locationId: String search: String sortField: String sortOrder: String minCourtCount: Int maxCourtCount: Int minPrice: Float maxPrice: Float openingDateBefore: String openingDateAfter: String }
+
+type Club {
+  id: String! name: String! subName: String address: String email: String whatsapp: String
+  instagram: String logoPath: String lat: Float lng: Float
+  linkMap: String openingHours: Map openingDate: Time locationId: String! price: Float courtCount: Int
+}
+
+type ClubsResult { clubs: [Club!]! totalCount: Int! totalPages: Int! hasNextPage: Boolean! }
+
+extend type Query { clubs(input: ClubsInput!): ClubsResult! club(id: String!): Club }

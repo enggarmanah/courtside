@@ -1,0 +1,146 @@
+type DashboardSummary { totalClubs: Int! totalBookings: Int! totalRevenue: Float! lastUpdatedAt: String }
+
+input DashboardSummaryInput {
+  locationId: String
+  from: String
+  to: String
+  minCourtCount: Int
+  maxCourtCount: Int
+  minPrice: Float
+  maxPrice: Float
+}
+
+input ClubOverviewInput {
+  locationId: String
+  from: String
+  to: String
+  sortField: String
+  sortOrder: String
+  page: Int!
+  pageSize: Int!
+  minCourtCount: Int
+  maxCourtCount: Int
+  minPrice: Float
+  maxPrice: Float
+}
+
+type ClubOverviewItem {
+  id: String!
+  name: String!
+  subName: String
+  address: String
+  lat: Float
+  lng: Float
+  locationId: String!
+  logoPath: String
+  price: Float
+  bookingCount: Int!
+  totalRevenue: Float!
+}
+
+type ClubOverviewResult {
+  items: [ClubOverviewItem!]!
+  totalCount: Int!
+  totalPages: Int!
+  hasNextPage: Boolean!
+}
+
+type Location {
+  id: String!
+  name: String!
+}
+
+extend type Query {
+  getDashboardSummary(input: DashboardSummaryInput!): DashboardSummary!
+  getClubOverview(input: ClubOverviewInput!): ClubOverviewResult!
+  getLocations: [Location!]!
+  getClubPerformanceAnalytics(input: ClubPerformanceAnalyticsInput!): ClubPerformanceResult!
+}
+
+input ClubPerformanceAnalyticsInput {
+  clubId: String!
+  from: String!
+  to: String!
+}
+
+type ClubPerformanceMetrics {
+  totalBookings: Int!
+  avgDailyBookings: Float!
+  totalRevenue: Float!
+  avgDailyRevenue: Float!
+}
+
+type ClubPerformanceChartItem {
+  label: String!
+  value: Float!
+}
+
+type ClubOccupancySlot {
+  time: String!
+  occupancyRate: Float!
+}
+
+type ClubPriceSlot {
+  time: String!
+  price: Float!
+}
+
+type ClubPriceDayRow {
+  day: String!
+  slots: [ClubPriceSlot!]!
+}
+
+type ClubOccupancyDayRow {
+  day: String!
+  slots: [ClubOccupancySlot!]!
+}
+
+type ClubPerformanceResult {
+  metrics: ClubPerformanceMetrics!
+  bookingChart: [ClubPerformanceChartItem!]!
+  revenueChart: [ClubPerformanceChartItem!]!
+  occupancyHeatmap: [ClubOccupancyDayRow!]!
+  priceMap: [ClubPriceDayRow!]!
+}
+
+input AnalyticsFilter {
+  locationId: String
+  from: String
+  to: String
+  minCourtCount: Int
+  maxCourtCount: Int
+  minPrice: Float
+  maxPrice: Float
+}
+
+type AnalyticsChartItem {
+  label: String!
+  value: Float!
+}
+
+type AnalyticsSeriesItem {
+  name: String!
+  value: Float!
+}
+
+type AnalyticsMultiSeries {
+  label: String!
+  series: [AnalyticsSeriesItem!]!
+}
+
+type AnalyticsPieItem {
+  name: String!
+  value: Float!
+}
+
+extend type Query {
+  getBookingTrend(filter: AnalyticsFilter!): [AnalyticsChartItem!]!
+  getBookingsPerClub(filter: AnalyticsFilter!, topX: Int!): [AnalyticsMultiSeries!]!
+  getClubGrowthByCity(filter: AnalyticsFilter!): [AnalyticsMultiSeries!]!
+  getCourtGrowthByCity(filter: AnalyticsFilter!): [AnalyticsMultiSeries!]!
+  getBookingDistribution(filter: AnalyticsFilter!, topX: Int!): [AnalyticsPieItem!]!
+  getClubsPerCity(filter: AnalyticsFilter!): [AnalyticsPieItem!]!
+  getPriceDistribution(filter: AnalyticsFilter!): [AnalyticsPieItem!]!
+  getCourtDistribution(filter: AnalyticsFilter!): [AnalyticsPieItem!]!
+  getAnalyticsSummary(filter: AnalyticsFilter!): DashboardSummary!
+}

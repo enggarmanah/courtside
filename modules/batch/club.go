@@ -5,6 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"sync"
+	"sync/atomic"
+	"time"
 )
 
 type ClubResponse struct {
@@ -81,6 +84,7 @@ func syncClubs(db *sql.DB, clubs []ClubAPI, locationID string) error {
 			updated_at = NOW()
 	`
 
+	var noPriceClubs []string
 	for _, c := range clubs {
 		logoPath := c.LogoPath + c.LogoName
 		var hours json.RawMessage
@@ -102,6 +106,17 @@ func syncClubs(db *sql.DB, clubs []ClubAPI, locationID string) error {
 		if err != nil {
 			return fmt.Errorf("failed to upsert club %s: %w", c.ID, err)
 		}
+
+		var priceCount int
+		err = db.QueryRow("SELECT COUNT(*) FROM prices WHERE club_id = $1", c.ID).Scan(&priceCount)
+		if err == nil && priceCount == 0 {
+			noPriceClubs = append(noPriceClubs, c.ID)
+		}
+	}
+
+	if len(noPriceClubs) > 0 {
+		fmt.Printf("  %d clubs without prices, crawling prices...\n", len(noPriceClubs))
+		runCourtPriceCrawlByIDs(db, noPriceClubs)
 	}
 
 	return nil
@@ -126,4 +141,47 @@ func runClubCrawlAll(token string, db *sql.DB, locationIDs []string) {
 	for _, locID := range locationIDs {
 		runClubCrawl(token, db, locID)
 	}
+}
+
+func runCourtPriceCrawlByIDs(db *sql.DB, clubIDs []string) {
+	cfg, err := loadConfig("config.properties")
+	if err != nil {
+		log.Printf("failed to load config for price crawl: %v", err)
+		return
+	}
+
+	loginResp, err := login(cfg.Email, cfg.Password)
+	if err != nil {
+		log.Printf("login failed for price crawl: %v", err)
+		return
+	}
+
+	start := time.Now()
+	total := len(clubIDs)
+	log.Printf("starting price crawl for %d clubs without prices", total)
+
+	var processed int64
+	workCh := make(chan string, total)
+	var wg sync.WaitGroup
+
+	for w := 0; w < 5; w++ {
+		wg.Add(1)
+		go func(workerID int) {
+			defer wg.Done()
+			for clubID := range workCh {
+				runCourtPriceCrawl(loginResp.AccessToken, db, clubID)
+				n := atomic.AddInt64(&processed, 1)
+				log.Printf("%s %d/%d price crawl completed", time.Now().Format(time.RFC3339), n, total)
+			}
+		}(w)
+	}
+
+	for _, clubID := range clubIDs {
+		workCh <- clubID
+	}
+	close(workCh)
+
+	wg.Wait()
+
+	log.Printf("finished price crawl for %d/%d clubs, duration %s", atomic.LoadInt64(&processed), total, formatDuration(time.Since(start)))
 }

@@ -1,0 +1,1 @@
+copy config-dev.properties config.properties

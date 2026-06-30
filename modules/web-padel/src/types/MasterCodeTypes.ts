@@ -1,0 +1,3 @@
+export enum MODULE_TYPE {
+  DASHBOARD = 'DASHBOARD',
+}
